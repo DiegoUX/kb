@@ -64,11 +64,17 @@ h6 					{ font-weight:bold; /* This helps to identify headings at the initial bu
 
 /*CUSTOMS STYLES*/
 
+/* Helpers */
+.no-padd {
+	padding: 0 !important;
+}
+/* end Helpers*/
+
 body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.billboard h1 {
+.billboard h1, h2, .home h3 {
 	font-family: 'Dosis', sans-serif;
 }
 
@@ -78,7 +84,7 @@ header .top-colors {
 }
 
 header .header {
-    padding: 25px 0;
+    padding: 50px 0;
 }
 
 header .nav-content {
@@ -86,11 +92,70 @@ header .nav-content {
 	height: 36px;
 }
 
+.lang {
+    height: 30px;
+    line-height: 28px;
+    padding: 0;
+    text-align: right;
+}
+
+.lang > a {
+    color: #CD2C24;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.lang > a:hover {
+	text-decoration: none;
+}
+
+.lang .flag {
+	background: url('img/english.png') no-repeat scroll center center transparent;
+	display: inline-block;
+	height: 14px;
+	width: 16px;
+	margin: 0 5px;
+	vertical-align: middle;
+}
+
+/* Search */
+#searchform .search-cont {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border-radius: 20px;
+}
+
+.search-block {
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+#searchform input#s {
+    background: transparent;
+    border: medium none;
+    box-shadow: none;
+    display: inline-block;
+    height: 30px;
+    margin-bottom: 0;
+    padding-left: 15px;
+    width: 80%;
+}
+
+#searchform input#searchsubmit {
+    background: none repeat scroll 0 0 #172041;
+    border: medium none;
+    border-radius: 15px;
+    display: inline-block;
+    float: right;
+    height: 30px;
+    vertical-align: top;
+    width: 30px;
+}
+
 /* Navigation */
 .main-menu a {
     line-height: 36px;
     margin: 0 5px;
-    padding: 10px 15px;
+    padding: 8px 20px;
     color: #817e7b;
     font-size: 14px;
 }
@@ -99,6 +164,86 @@ header .nav-content {
 	background: #221F4E;
 	color: #fff;
 }
+
+/* Billboard */
+.billboard {
+	background: #1B2143;
+}
+
+.orbit-container .orbit-timer {
+	display: none;
+}
+
+/* Specialities*/
+
+.speciality img {
+	width: 100%;
+}
+
+.home h2 {
+	font-size: 30px;
+	color: #0158a5;
+	font-weight: 400;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.home h3 {
+	font-size: 20px;
+	color: #777;
+	font-weight: 500;
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+
+.speciality {
+	background: #F6F6F6;
+	padding: 35px 0;
+}
+
+.speciality .callendar {
+	font-size: 15px;
+	color: #aeaaa6;
+	letter-spacing: 0.5px;
+	margin: 10px 0 20px;
+}
+
+.production p {
+    color: #817E7B;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.production .prod-content p {
+	margin: 10px 0;
+	line-height: 26px;
+}
+
+span.blue {
+    background: none repeat scroll 0 0 #244B98;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 3px 10px;
+}
+
+span.red {
+    background: none repeat scroll 0 0 #890D03;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 3px 10px;
+}
+
+/* Footer */
+footer {
+	background: #1B2143;
+	padding: 15px 0;
+}
+
+footer p {
+	color: #FFF;
+	font-size: 13px;
+}
+
 
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) ------------------------------------------------------------

@@ -3,11 +3,13 @@
 	<div class="row header">
 		<div class="large-6 columns">
 			<div class="logo">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
+				<a href="#">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
+				</a>
 			</div>
 		</div>
 		<div class="large-6 columns">
-			<div class="search-block">
+			<div class="search-block right">
 				<div class="large-3 columns lang">
 					<a href="#">
 						<span class="flag"></span>English

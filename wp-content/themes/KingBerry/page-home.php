@@ -16,8 +16,54 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<?php the_content(); ?>
-<?php endwhile; ?>
+<section>		
+	<div class="billboard">
+		<div class="row">
+			<ul class="slider" data-orbit>
+				<li>
+					<img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 1" />
+				</li>
+				<li>
+					<img src="http://placehold.it/1000x300/EE964D/fff" alt="slide 2" />
+				</li>
+				<li>
+					<img src="http://placehold.it/1000x300/FDC43D/fff" alt="slide 3" />
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="speciality">
+		<div class="row">
+			<div class="large-12 column">
+				<h2>Nuestra Especialidad</h2>
+			</div>
+			<div class="large-6 columns">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/arandano.jpg" alt="Arándanos">
+				<h3>Arándanos</h3>
+				<div class="production">
+					<span class="ico"></span><p>Época de Producción:</p>
+					<div class="callendar">Ene · Feb · Mar · Abr · May · Jun · Jul · Ago  <span class="blue">Sep · Oct · Nov</span>   Dic</div>
+					<div class="prod-content">
+						<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ornare odio.</p>
+					</div>
+				</div>
+			</div>
+			<div class="large-6 columns">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/frutilla.jpg" alt="Frutillas">
+				<h3>Frutillas</h3>
+				<div class="production">
+					<span class="ico"></span><p>Época de Producción:</p>
+					<div class="callendar">Ene · Feb · Mar · Abr · May · Jun  <span class="red">Jul · Ago   Sep · Oct · Nov · Dic</span></div>
+					<div class="prod-content">
+						<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt ornare odio.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
