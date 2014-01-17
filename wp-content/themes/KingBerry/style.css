@@ -72,6 +72,7 @@ h6 					{ font-weight:bold; /* This helps to identify headings at the initial bu
 
 body {
 	font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
 }
 
 .billboard h1, h2, .home h3 {
@@ -152,7 +153,11 @@ header .nav-content {
 }
 
 /* Navigation */
-.main-menu a {
+#menu-main-menu li {
+    display: inline-block;
+}
+
+#menu-main-menu a {
     line-height: 36px;
     margin: 0 5px;
     padding: 8px 20px;
@@ -160,9 +165,9 @@ header .nav-content {
     font-size: 14px;
 }
 
-.main-menu a:hover {
+#menu-main-menu a:hover, .current-menu-item a {
 	background: #221F4E;
-	color: #fff;
+	color: #fff !important;
 }
 
 /* Billboard */
@@ -172,6 +177,50 @@ header .nav-content {
 
 .orbit-container .orbit-timer {
 	display: none;
+}
+
+.orbit-container .orbit-slides-container img {
+    float: right;
+}
+
+.billboard .billboard-text {
+    bottom: 100px;
+    position: absolute;
+    z-index: 200;
+}
+
+.billboard-text h1 {
+    font-family: 'Dosis';
+    font-weight: 500;
+    font-size: 3.75em;
+    line-height: 64px;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.billboard-text p {
+    font-size: 1em;
+    line-height: 27px;
+    color: #FFF;
+    font-size: 400;
+    margin: 10px 0;
+}
+
+.billboard-text a.btn {
+    background: none repeat scroll 0 0 #CD2C24;
+    border-bottom: 5px solid #84190F;
+    border-radius: 7px 7px 10px 10px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px 0;
+    padding: 14px 20px;
+}
+
+.billboard-text a.btn:hover, a.btn:active {
+    border-width: 0 0 3px;
+    margin-top: 17px;
 }
 
 /* Specialities*/

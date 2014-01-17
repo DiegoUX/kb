@@ -18,18 +18,21 @@
 
 <section>		
 	<div class="billboard">
+		<ul class="slider" data-orbit>
+			<li>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/slider/billboard-1.jpg" alt="slide-1">
+			</li>
+			<li>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/slider/billboard-2.jpg" alt="slide-2">
+			</li>
+		</ul>
 		<div class="row">
-			<ul class="slider" data-orbit>
-				<li>
-					<img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 1" />
-				</li>
-				<li>
-					<img src="http://placehold.it/1000x300/EE964D/fff" alt="slide 2" />
-				</li>
-				<li>
-					<img src="http://placehold.it/1000x300/FDC43D/fff" alt="slide 3" />
-				</li>
-			</ul>
+			<div class="large-4 columns">
+				<div class="billboard-text">
+				<h1>Lo Mejor de Tucumán al Mundo</h1>
+				<p>Somos una empresa dedicada a la producción, empaque y comercialización de arándanos y frutillas, bajo los estándares más altos de calidad a nivel internacional.</p>
+				<a href="#" class="btn">Conozca Nuestros Productos</a>
+			</div>
 		</div>
 	</div>
 </section>

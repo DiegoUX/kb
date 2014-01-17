@@ -23,7 +23,7 @@
 	</div>
 	<div class="nav-content">
 		<div class="row">
-			<nav class="main-menu">
+			<!-- <nav class="main-menu">
 				<ul>
 					<li>
 						<a href="#">Inicio</a>
@@ -35,7 +35,11 @@
 						<a href="#">Contactos</a>
 					</li>
 				</ul>
-			</nav>
+			</nav> -->
+
+			<div class="large-12 columns">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			</div>
 		</div>
 	</div>		
 </header>
