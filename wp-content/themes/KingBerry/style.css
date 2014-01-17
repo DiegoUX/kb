@@ -206,7 +206,7 @@ header .nav-content {
     margin: 10px 0;
 }
 
-.billboard-text a.btn {
+.billboard-text a.btn, .news a.btn {
     background: none repeat scroll 0 0 #CD2C24;
     border-bottom: 5px solid #84190F;
     border-radius: 7px 7px 10px 10px;
@@ -218,7 +218,7 @@ header .nav-content {
     padding: 14px 20px;
 }
 
-.billboard-text a.btn:hover, a.btn:active {
+.billboard-text a.btn:hover, .billboard-text a.btn:active, .news a.btn:hover, .news a.btn:active {
     border-width: 0 0 3px;
     margin-top: 17px;
 }
@@ -280,6 +280,56 @@ span.red {
     border-radius: 15px;
     color: #FFFFFF;
     padding: 3px 10px;
+}
+
+/* Sub Footer */
+
+.sub-footer {
+    padding: 35px 0;
+}
+
+.certif li {
+    display: inline-block;
+    margin: 0 35px 35px 0;
+}
+
+.certif li img {
+    margin: 5px;
+}
+
+.news {
+    padding-right: 30px;
+}
+
+.news h4 a {
+    color: #cd2c24;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.news h4 a:hover {
+    text-decoration: underline;
+}
+
+.news .cont-news {
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 0.85em;
+    color: #817e7b;
+}
+
+.news li:last-child .cont-news {
+    border-bottom: 0;
+}
+
+.news p a {
+    color: #cd2c24;
+    margin-left: 10px;
+}
+
+.news p a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
