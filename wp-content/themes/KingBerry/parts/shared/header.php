@@ -23,20 +23,6 @@
 	</div>
 	<div class="nav-content">
 		<div class="row">
-			<!-- <nav class="main-menu">
-				<ul>
-					<li>
-						<a href="#">Inicio</a>
-						<a href="#">Nuestra Empresa</a>
-						<a href="#">Nuestros Productos</a>
-						<a href="#">Nuestros Clientes</a>
-						<a href="#">Certificaciones</a>
-						<a href="#">Noticias</a>
-						<a href="#">Contactos</a>
-					</li>
-				</ul>
-			</nav> -->
-
 			<div class="large-12 columns">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</div>

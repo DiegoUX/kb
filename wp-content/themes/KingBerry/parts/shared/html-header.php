@@ -15,6 +15,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/foundation.min.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/normalize.css">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/fonts.css">
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>

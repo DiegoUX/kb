@@ -150,6 +150,11 @@ header .nav-content {
     height: 30px;
     vertical-align: top;
     width: 30px;
+    color: #FFF;
+}
+
+#searchform input#searchsubmit:hover {
+    color: #7B83A0;
 }
 
 /* Navigation */
@@ -175,15 +180,15 @@ header .nav-content {
 	background: #1B2143;
 }
 
-.orbit-container .orbit-timer {
+/*.orbit-container .orbit-timer {
 	display: none;
 }
 
 .orbit-container .orbit-slides-container img {
     float: right;
-}
+}*/
 
-.billboard .billboard-text {
+.billboard-text {
     bottom: 100px;
     position: absolute;
     z-index: 200;
@@ -215,7 +220,7 @@ header .nav-content {
     font-size: 16px;
     font-weight: 500;
     margin: 15px 0;
-    padding: 14px 20px;
+    padding: 10px 20px;
 }
 
 .billboard-text a.btn:hover, .billboard-text a.btn:active, .news a.btn:hover, .news a.btn:active {
@@ -280,6 +285,18 @@ span.red {
     border-radius: 15px;
     color: #FFFFFF;
     padding: 3px 10px;
+}
+
+.icon-calendar.arandanos-ico {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #244B98;
+}
+
+.icon-calendar.frutillas-ico {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #890D03;
 }
 
 /* Sub Footer */
@@ -359,5 +376,11 @@ footer p {
 @media screen and (-webkit-min-device-pixel-ratio:2) {
 
 					{ /* Place your styles here for all 'Retina' screens */ }
+
+}
+
+@media screen and (min-width:400px) and (max-width: 768) {
+
+                    { /* Place your styles here for all widths greater than 400px */ }
 
 }
