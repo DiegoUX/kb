@@ -263,16 +263,17 @@ header .nav-content {
 	padding: 35px 0;
 }
 
-.speciality .callendar {
-	font-size: 15px;
+.callendar  {
+	font-size: 1em;
 	color: #aeaaa6;
 	letter-spacing: 0.5px;
 	margin: 10px 0 20px;
+    line-height: 1.9em;
 }
 
 .production p {
     color: #817E7B;
-    font-size: 15px;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
@@ -295,6 +296,13 @@ span.red {
     padding: 3px 10px;
 }
 
+span.green {
+    background: none repeat scroll 0 0 #005952;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 3px 10px;
+}
+
 .icon-calendar.arandanos-ico {
     margin-right: 8px;
     font-size: 20px;
@@ -305,6 +313,20 @@ span.red {
     margin-right: 8px;
     font-size: 20px;
     color: #890D03;
+}
+
+.icon-calendar.limones-ico {
+    margin-right: 8px;
+    font-size: 20px;
+    color: #005952;
+}
+
+h2.title-red {
+    color: #890D03 !important;
+}
+
+h2.title-green {
+    color: #005952 !important;
 }
 
 /* Sub Footer */
@@ -422,6 +444,45 @@ footer p {
 /* Product pages */
 table {
     width: 100%;
+}
+
+.product-sidebar table tr.even, table tr.alt, table tr:nth-of-type(2n) {
+    background: transparent;
+}
+
+.product-sidebar table tr td {
+    color: #777;
+    font-size: 0.867em;
+    padding: 0.5625rem 0;
+}
+
+.product-sidebar table tr td:last-child {
+    text-align: right;
+}
+
+.product-sidebar h3 {
+    color: #777777;
+    font-family: 'Dosis';
+    font-size: 1.333em;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.product-sidebar span {
+    border-bottom: 1px solid #777777;
+    color: #777777;
+    display: block;
+    font-size: 0.8667em;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 5px;
+    padding-bottom: 15px;
+}
+
+.product-sidebar {
+    background: none repeat scroll 0 0 #F6F6F6;
+    padding: 50px 20px;
 }
 
 /* ---------------------------------------------------------------------------------------------------------- 

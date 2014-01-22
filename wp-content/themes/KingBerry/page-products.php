@@ -28,12 +28,9 @@
 </div>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<div class="row">
-	<div class="large-8 columns">
-		<h2><?php the_title(); ?></h2>
-	</div>
-</div>
-<?php the_content(); ?>
+
+	<?php the_content(); ?>
+
 <?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

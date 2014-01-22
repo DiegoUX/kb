@@ -147,3 +147,6 @@
 	    ));
 
 	}
+
+// Remove p tags
+remove_filter( 'the_content', 'wpautop' ); 
