@@ -485,6 +485,21 @@ table {
     padding: 50px 20px;
 }
 
+/* Contact page */
+.contact {
+    background: #F6F6F6;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    box-shadow: none !important;
+    width: 90% !important;
+    border: none !important;
+}
+
+.contact textarea {
+    height: auto;
+}
+
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
