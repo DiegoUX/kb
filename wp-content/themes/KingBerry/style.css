@@ -159,7 +159,7 @@ header .nav-content {
 
 /* Navigation */
 #menu-main-menu li {
-    display: inline-block;
+    display: inline-table;
 }
 
 #menu-main-menu a {
@@ -173,6 +173,14 @@ header .nav-content {
 #menu-main-menu a:hover, .current-menu-item a {
 	background: #221F4E;
 	color: #fff !important;
+}
+
+#menu-main-menu ul.sub-menu {
+    display: none;
+}
+
+#menu-main-menu ul.sub-menu li {
+    display: block !important;
 }
 
 /* Billboard */
@@ -206,7 +214,7 @@ header .nav-content {
 .billboard-text p {
     font-size: 1em;
     line-height: 27px;
-    color: #FFF;
+    color: #FFF !important;
     font-size: 400;
     margin: 10px 0;
 }
@@ -356,10 +364,65 @@ footer {
 }
 
 footer p {
-	color: #FFF;
+	color: #FFF !important;
 	font-size: 13px;
 }
 
+
+/* Pages */
+
+.main-images {
+    background: none repeat scroll 0 0 #1B2143;
+    text-align: center;
+}
+
+.page h2 {
+    padding-top: 20px;
+    font-size: 30px;
+    color: #0158a5;
+    font-weight: 400;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.page h4 {
+    color: #817e7b;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.page h5 {
+    font-size: 0.9em;
+    color: #817e7b;
+    font-weight: 400;
+}
+
+.page p {
+    color: #817E7B;
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+/* Nuestra empresa */
+.gray-section {
+    background: #F6F6F6;
+    padding: 20px 0 180px;
+}
+
+.gray-section .photo img {
+    border-radius: 100%;
+}
+
+.gray-section .perfil {
+    margin-top: 40px;
+}
+
+/* Product pages */
+table {
+    width: 100%;
+}
 
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) ------------------------------------------------------------

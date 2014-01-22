@@ -104,3 +104,46 @@
 	   return '<a href="'. get_permalink($post->ID) . '">Ver más &raquo;</a>';
 	}
 	add_filter('excerpt_more', 'new_excerpt_more');
+
+	// Sidebar
+
+
+	if (function_exists('register_sidebar')) {
+
+		register_sidebar(array(
+	        'name' => __('Certificaciones Home'),
+	        'id' => 'certificaciones-home',
+	        'before_widget' => '<div id="%1$s" class=" %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('Productos: Arándanos'),
+	        'id' => 'prod-arandanos',
+	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('Productos: Limones'),
+	        'id' => 'prod-limones',
+	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('Productos: Frutillas'),
+	        'id' => 'prod-frutillas',
+	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	}

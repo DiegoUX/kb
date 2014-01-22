@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying product pages.
+ *
+ *Template Name: Products
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -27,7 +29,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <div class="row">
-	<div class="large-12 columns">
+	<div class="large-8 columns">
 		<h2><?php the_title(); ?></h2>
 	</div>
 </div>
