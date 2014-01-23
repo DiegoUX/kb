@@ -75,7 +75,7 @@ body {
     font-size: 15px;
 }
 
-.billboard h1, h2, .home h3 {
+.billboard h1, h2, .home h3, .info h3 {
 	font-family: 'Dosis', sans-serif;
 }
 
@@ -485,19 +485,177 @@ table {
     padding: 50px 20px;
 }
 
+.fuente {
+    color: #777777;
+    font-size: 0.867em;
+    padding: 20px 0 0;
+}
+
+.fuente a {
+    color: #cd2c24;
+}
+
+.fuente a:hover {
+    text-decoration: underline;
+}
+
 /* Contact page */
 .contact {
     background: #F6F6F6;
+    padding-bottom: 60px;
 }
 
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
     box-shadow: none !important;
-    width: 90% !important;
     border: none !important;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, textarea:focus {
+    background: #EBEBEB;
+}
+
+span.wpcf7-not-valid-tip, div.wpcf7-validation-errors {
+    color: #991a14;
+    font-size: 0.8em;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-mail-sent-ok {
+    border: none;
+    margin: 0;
+    width: 75%;
+}
+
+/*div.wpcf7-validation-errors:before {
+    content: "e608";
+    margin-right: 5px;
+}*/
+
+div.wpcf7-mail-sent-ok {
+    color: #027040;
+    font-size: 0.8em;
+}
+
+.wpcf7-form > p {
+    width: 90%;
 }
 
 .contact textarea {
     height: auto;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    border: medium none;
+    float: right;
+    background: none repeat scroll 0 0 #CD2C24;
+    border-bottom: 5px solid #84190F;
+    border-radius: 7px 7px 10px 10px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px 0;
+    padding: 10px 20px;
+}
+
+.wpcf7-form-control.wpcf7-submit:hover {
+    border-width: 0 0 3px;
+    margin-top: 17px;
+}
+
+.contact .textwidget > img {
+    margin-top: 24px;
+}
+
+.contact .textwidget small a {
+    color: #FF0000 !important;
+    display: block;
+    margin-top: 5px;
+}
+
+.contact .textwidget small a:hover {
+    text-decoration: underline;
+}
+
+.info {
+    margin-top: 25px;
+}
+
+.info > p {
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+.info h3 {
+    text-transform: uppercase;
+    color: #0158A5;
+    font-size: 1.33em;
+    font-weight: 400;
+}
+
+.info h3 span {
+    margin-right: 10px;
+    font-size: 0.8em;
+}
+
+
+/* Certificaciones */
+
+.certif-col {
+    margin-bottom: 50px;
+}
+
+.certificaciones .logo-certif {
+    line-height: 125px;
+    margin-bottom: 10px;
+    min-height: 125px;
+}
+
+.certificaciones h3 {
+    font-family: 'Dosis', 'sans';
+    text-transform: uppercase;
+    color: #777;
+    font-size: 1.33em;
+    font-weight: 500;
+}
+
+.certificaciones h3 span {
+    font-weight: 300;
+    text-transform: none;
+}
+
+/* Page 404 */
+.p_error {
+    padding: 20px 0 50px;
+}
+
+.p_error h2 {
+    color: #0158A5;
+    font-family: 'Dosis', 'sans';
+    font-size: 5em;
+}
+
+.p_error span {
+    font-size: 0.5em;
+    font-weight: 400;
+}
+
+.p_error p {
+    color: #777777;
+    margin: 10px 0;
+    width: 60%;
+}
+
+p.contact-page {
+    font-weight: 600;
+    color: #444;
+}
+
+.p_error a {
+    color: #CD2C24;
+}
+
+.p_error a:hover {
+    text-decoration: underline;
 }
 
 /* ---------------------------------------------------------------------------------------------------------- 
@@ -523,3 +681,36 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
                     { /* Place your styles here for all widths greater than 400px */ }
 
 }
+
+@media screen and (max-width:480px) {
+    .contact .wpcf7-form-control.wpcf7-submit {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .contact .wpcf7-form > p {
+        width: 100%;
+    }
+
+    .certif-col {
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    .certificaciones .logo-certif {
+        line-height: 0;
+        margin: 25px 0 10px;
+        min-height: 0;
+    }
+
+    .p_error h2 {
+        font-size: 3.2em;
+    }
+
+    .p_error p {
+        width: 100%;
+    }
+}
+

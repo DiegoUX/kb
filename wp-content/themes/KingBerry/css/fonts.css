@@ -23,8 +23,8 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-left:before {
-	content: "\e600";
+.icon-check:before {
+	content: "\e60c";
 }
 .icon-home:before {
 	content: "\e601";
@@ -34,6 +34,9 @@
 }
 .icon-arrow-left:before {
 	content: "\e603";
+}
+.icon-arrow-left2:before {
+	content: "\e600";
 }
 .icon-news:before {
 	content: "\e604";
@@ -58,4 +61,7 @@
 }
 .icon-calendar:before {
 	content: "\e60b";
+}
+.icon-cross:before {
+	content: "\e60d";
 }

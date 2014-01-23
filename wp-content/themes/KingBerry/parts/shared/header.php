@@ -3,7 +3,7 @@
 	<div class="row header">
 		<div class="large-6 columns">
 			<div class="logo">
-				<a href="#">
+				<a href="<?php echo get_site_url(); ?>">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
 				</a>
 			</div>
