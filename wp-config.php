@@ -25,7 +25,7 @@ define('DB_USER', 'kb_user');
 define('DB_PASSWORD', 'kb_pass');
 
 /** MySQL hostname */
-define('DB_HOST', 'kb.loc');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

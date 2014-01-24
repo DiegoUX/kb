@@ -16,6 +16,9 @@
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/foundation.min.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/normalize.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/fonts.css">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/menu-responsive.css">
+
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/modernizr.js"></script>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
