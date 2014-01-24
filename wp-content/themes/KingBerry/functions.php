@@ -120,6 +120,15 @@
 	    ));
 
 	    register_sidebar(array(
+	        'name' => __('Contact Sidebar'),
+	        'id' => 'contact-sidebar',
+	        'before_widget' => '<div id="%1$s" class=" %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
 	        'name' => __('Productos: Arándanos'),
 	        'id' => 'prod-arandanos',
 	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
@@ -148,4 +157,6 @@
 
 	}
 
-remove_filter( 'the_content', 'wpautop' );
+// Remove p tags
+remove_filter( 'the_content', 'wpautop' ); 
+
