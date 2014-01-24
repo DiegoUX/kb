@@ -287,6 +287,7 @@ span.blue {
     border-radius: 15px;
     color: #FFFFFF;
     padding: 3px 10px;
+    position: relative;
 }
 
 span.red {
@@ -658,6 +659,100 @@ p.contact-page {
     text-decoration: underline;
 }
 
+/* Nuestros Clientes */
+.pattern {
+    background: url('img/pattern.png') repeat scroll center center transparent;
+    padding: 30px 0;
+}
+
+.pattern img {
+    margin: 0 auto;
+    display: block;
+}
+
+.anual-prod {
+    border-top: 1px solid #DEDEDE;
+    padding: 12px 0;
+}
+
+.anual-prod:last-child {
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 100px;
+}
+
+.anual-prod .callendar {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.anual-prod h3 {
+    display: inline-block;
+    font-family: 'Dosis','sans';
+    font-size: 1.333em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.anual-prod h3 > span {
+    margin-right: 10px;
+    font-size: 3em;
+}
+
+.iqf {
+    border: 1px solid #244B98;
+    border-radius: 15px;
+    padding: 2px 10px;
+    position: relative;
+}
+
+.anual-prod small {
+    bottom: 28px;
+    left: 32%;
+    color: #244B98;
+    font-size: 0.8em;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.anual-prod .iqf small {
+    bottom: 28px;
+    left: 40%;
+}
+
+
+.icon-arandano h3 {
+    color: #244B98;
+}
+
+.icon-frutilla h3 {
+    color: #890D03;
+}
+
+.icon-limon h3 {
+    color: #005952;
+}
+
+.icon-icon_23903:before, .icon-icon_23898:before {
+    vertical-align: middle;
+}
+
+.callendar-resp {
+    color: #777777;
+    font-family: 'Open Sans','sans-serif';
+    font-size: 1.33em;
+    font-style: italic;
+}
+
+.paises-responsive {
+    padding-top: 10px;
+}
+
+.paises-responsive > li {
+    color: #777777;
+    font-size: 1.33em;
+}
+
+
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
@@ -690,6 +785,15 @@ p.contact-page {
 
 
 @media screen and (max-width:767px) {
+    
+    .page h2, .gray-section, .clientes {
+        text-align: center;
+    }
+
+    .gray-section .perfil {
+        margin: 10px 0 40px;
+    }
+
     .contact .wpcf7-form > p {
         width: 100%;
     }
@@ -712,5 +816,18 @@ p.contact-page {
     .p_error p {
         width: 100%;
     }
+
+    .anual-prod {
+        padding: 25px 0;
+    }
+
+    .anual-prod h3 {
+        display: block;
+    }
 }
 
+@media screen and (max-width:640px) {
+    .callendar {
+        margin: 0;
+    }
+}
