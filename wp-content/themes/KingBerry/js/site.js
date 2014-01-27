@@ -16,10 +16,10 @@
 		});
 
 	});
-
+	
 // SCRIPT PARA MENU
 $(document).ready(function(){
-	$(".menu-item-has-children > a").click(
+	$(".menu-item-has-children > a").on("click",
 		function(e){
 		    e.preventDefault();
 		    e.stopPropagation();
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 		});
 
-	$("body").click(
+	$("body").on("click",
 		function(){
 			$(".sub-menu.displayed").slideToggle();
 			//Busque a todos las lista "sub-menu" desplegadas, y plieguelas.
