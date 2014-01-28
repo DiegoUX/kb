@@ -47,6 +47,24 @@
 	
 	======================================================================================================================== */
 
+	/* ========================================================================================================================
+
+        Archive Pagination: Displays navigation to next/previous pages when applicable.
+
+        ======================================================================================================================== */
+
+        if ( ! function_exists( 'content_nav' ) ) :
+                function content_nav( $html_id ) {
+	                global $wp_query;
+	                $html_id = esc_attr( $html_id );
+	                if ( $wp_query->max_num_pages > 1 ) : ?>
+	                        <nav id="pagination">
+                                <div class="past-page"><?php previous_posts_link( 'Newer &raquo;' ); ?></div>
+                                <div class="next-page"><?php next_posts_link( ' &laquo; Older' ); ?></div>
+	                        </nav>
+	                <?php endif;
+                }
+        endif;
 
 
 	/* ========================================================================================================================
@@ -101,18 +119,26 @@
 
 	function new_excerpt_more($more) {
 	   global $post;
-	   return '<a href="'. get_permalink($post->ID) . '">Ver más &raquo;</a>';
+	   return '<a class="ver-mas" href="'. get_permalink($post->ID) . '">Ver más &raquo;</a>';
 	}
 	add_filter('excerpt_more', 'new_excerpt_more');
 
 	// Sidebar
-
 
 	if (function_exists('register_sidebar')) {
 
 		register_sidebar(array(
 	        'name' => __('Certificaciones Home'),
 	        'id' => 'certificaciones-home',
+	        'before_widget' => '<div id="%1$s" class=" %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('Sidebar Noticias'),
+	        'id' => 'noticias',
 	        'before_widget' => '<div id="%1$s" class=" %2$s">',
 	        'after_widget' => '</div>',
 	        'before_title' => '<h3>',
@@ -156,6 +182,43 @@
 	    ));
 
 	}
+
+
+	function Last5posts()
+	{
+	    $args = array( "showposts" => 5 );                  
+	    query_posts($args);
+
+	    $content = "";
+
+	    if( have_posts() ) : 
+
+	        while( have_posts() ) :
+
+	            the_post();
+	            $link = get_permalink();
+	            $title = get_the_title();
+	            $date = get_the_date();                              
+
+	            $content .= "<div class='widget-custom-content'>";
+	            $content .= "<h4><a href='$link' target='_top'>$title</a></h4>\n";
+	            $content .= "<span>$date</span>";
+	            $content .= "<p class='excerpt'>" . get_the_excerpt() . "</p>";
+	            $content .= "</div>";
+
+	        endwhile;
+
+	        wp_reset_query();
+
+	    endif;
+
+	    // Leave one line commented out depending on usage
+	    echo $content;   // For use as widget
+	    //return $content; // for use as shortcode
+	}
+
+	register_sidebar_widget(__('Last 5 Posts'), 'Last5posts');
+
 
 // Remove p tags
 remove_filter( 'the_content', 'wpautop' ); 
