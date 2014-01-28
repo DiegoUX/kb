@@ -14,22 +14,45 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<?php if ( have_posts() ): ?>
-<h2>Latest Posts</h2>	
-<ol>
-<?php while ( have_posts() ) : the_post(); ?>
-	<li>
-		<article>
-			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-			<?php the_content(); ?>
-		</article>
-	</li>
-<?php endwhile; ?>
-</ol>
-<?php else: ?>
-<h2>No posts to display</h2>
-<?php endif; ?>
-
+<div class="noticias page">
+	<div class="row">
+		<div class="large-12 columns">
+			<h2>Noticias</h2>
+		</div>	
+	</div>		
+	<?php if ( have_posts() ): ?>	
+	<ol>
+	<?php while ( have_posts() ) : the_post(); ?>
+		<li>
+			<div class="row">
+				<article class="news-content">	
+					<?php if ( has_post_thumbnail() ) { ?>
+					<div class="post-thumb large-3 columns">
+						<?php the_post_thumbnail('medium'); ?>
+					</div>
+					<?php }  ?>
+					<div class="large-9 columns">
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date('F j, Y'); ?></time><span class="bullet">&bull;</span>
+						<div class="cat"><?php the_category(', '); ?></div>
+						<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+						<?php the_excerpt(); ?>
+					</div>
+				</article>
+			</div>
+		</li>
+	<?php endwhile; ?>
+	</ol>
+	<div class="row">
+		<div class="large-12 columns">
+			<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+			<!-- <div class="navigation">
+				<div class="next-posts"><?php next_posts_link(); ?></div>
+				<div class="prev-posts"><?php previous_posts_link(); ?></div>
+			</div> -->
+		</div>
+	</div> 
+	<?php else: ?>
+	<h2>No posts to display</h2>
+	<?php endif; ?>
+</div>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
