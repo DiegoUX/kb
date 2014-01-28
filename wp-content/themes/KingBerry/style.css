@@ -364,10 +364,16 @@ nav#nav{
       border-top: 6px solid #D11C2B;
     }
 
-  /*  html.js.svg.js-ready.csstransforms {
-      margin: 0 !important;
+    nav#nav #menu-main-menu ul.sub-menu{
+        background: transparent;
+        position: relative !important;
+        display: none;
     }
-*/
+
+    html.js-nav nav#nav #menu-main-menu ul.sub-menu{
+        display: block;
+    }
+
     nav#nav #menu-main-menu ul.sub-menu{
         background: transparent;
     }
@@ -378,6 +384,34 @@ nav#nav{
 
     nav#nav li a:focus, nav#nav li a:hover{
         background: transparent;
+    }
+
+    #nav-open-btn.nav-btn span {
+      background: none repeat scroll 0 0 #CC2A28;
+      border-radius: 2em;
+      display: inline-block;
+      height: 0.4em;
+      opacity: 1;
+    }
+
+    #nav-open-btn.nav-btn {
+      background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+      display: inline-block;
+      overflow: visible;
+      text-indent: 0;
+      white-space: normal;
+      opacity: 1;
+      height: 2.45em;
+    }
+
+    #nav-open-btn.nav-btn > span {
+      background: none repeat scroll 0 0 #CC2A28;
+      border-radius: 2em;
+      display: block;
+      height: 0.4em;
+      margin-top: 6px;
+      opacity: 1;
+      width: 100%;
     }
 }
 /* end MM new menu styles */

@@ -4,6 +4,11 @@
 			<div class="top-colors"></div>
 			<div class="row header">
 				<div class="large-6 columns">
+					<a class="nav-btn hide-for-mu" id="nav-open-btn" href="#nav">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
 					<div class="logo">
 						<a href="<?php echo get_site_url(); ?>">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
