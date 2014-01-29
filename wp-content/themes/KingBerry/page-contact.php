@@ -29,7 +29,7 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <section>
-	<div class="contact">
+	<div class="contact-section">
 		<div class="row">
 			<div class="large-12 columns">
 				<h2><?php the_title(); ?></h2>

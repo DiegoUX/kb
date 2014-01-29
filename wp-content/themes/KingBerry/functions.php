@@ -153,6 +153,15 @@
 	        'before_title' => '<h3>',
 	        'after_title' => '</h3>'
 	    ));
+	    // Contact Sidebar Inglés
+	    register_sidebar(array(
+	        'name' => __('Contact Sidebar EN'),
+	        'id' => 'contact-sidebar-en',
+	        'before_widget' => '<div id="%1$s" class=" %2$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
 
 	    register_sidebar(array(
 	        'name' => __('Productos: Arándanos'),
@@ -175,6 +184,33 @@
 	    register_sidebar(array(
 	        'name' => __('Productos: Frutillas'),
 	        'id' => 'prod-frutillas',
+	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+	    // Productos Inglés
+	    register_sidebar(array(
+	        'name' => __('Products: Blueberries'),
+	        'id' => 'prod-blueberries',
+	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('Products: Lemons'),
+	        'id' => 'prod-lemons',
+	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('Products: Strawberries'),
+	        'id' => 'prod-strawberries',
 	        'before_widget' => '<div id="%1$s" class="product-sidebar">',
 	        'after_widget' => '</div>',
 	        'before_title' => '<h3>',

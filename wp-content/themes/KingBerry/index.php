@@ -17,7 +17,7 @@
 <div class="noticias page">
 	<div class="row">
 		<div class="large-12 columns">
-			<h2>Noticias</h2>
+			<h2><?php wp_title(''); ?></h2>
 		</div>	
 	</div>		
 	<?php if ( have_posts() ): ?>	

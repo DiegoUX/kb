@@ -37,14 +37,13 @@
 						<li>
 							<h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 							<div class="cont-news">
-								<!--<?php the_content(); ?> -->
 								<?php the_excerpt(); ?>
 							</div>	
 						</li>
 					<?php endwhile; ?>
 					</ul>
 					<a href="#" class="btn">Ver Más Noticias</a>
-				</div>
+				</div>		
 			</div>
 			<div class="large-6 columns">
 				<h2>Certificaciones</h2>

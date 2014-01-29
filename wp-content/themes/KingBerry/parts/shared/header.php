@@ -18,9 +18,10 @@
 				<div class="large-6 columns">
 					<div class="search-block right">
 						<div class="large-3 columns lang">
-							<a href="#">
+							<!-- <a href="<?php get_site_url(); ?>/en">
 								<span class="flag"></span>English
-							</a>
+							</a> -->
+							<?php do_action('icl_language_selector'); ?>
 						</div>	
 						<div class="large-9 columns hide-for-sm">
 							<?php get_search_form(); ?>

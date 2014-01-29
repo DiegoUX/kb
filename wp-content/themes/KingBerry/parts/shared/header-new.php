@@ -12,12 +12,12 @@
 				</div>
 				<div class="large-6 columns">
 					<div class="search-block right">
-						<div class="large-3 columns lang">
+						<div class="large-3 medium-3 columns lang">
 							<a href="#">
 								<span class="flag"></span>English
 							</a>
 						</div>	
-						<div class="large-9 columns">
+						<div class="large-9 medium-9 columns">
 							<?php get_search_form(); ?>
 						</div>
 					</div>
