@@ -14,7 +14,7 @@
 				</div>
 				<div class="large-6 small-4 medium-custom columns">
 					<div class="logo">
-						<a href="<?php echo get_site_url(); ?>">
+						<a href="<?php bloginfo('url'); ?>">
 							<img class="hide-for-small" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
 							<img class="show-for-small" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-responsive.png" alt="King Berry SA">
 						</a>
