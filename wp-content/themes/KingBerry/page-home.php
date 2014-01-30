@@ -14,10 +14,13 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <section>		
-	<div class="billboard">
+	<div class="billboard hide-for-small">
 		<?php 
 		    echo do_shortcode("[metaslider id=35]"); 
 		?>
+	</div>
+	<div class="billboard-responsive show-for-small">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/billboard-responsive.jpg" alt="Arándanos">
 	</div>
 </section>
 <section>
@@ -29,7 +32,18 @@
 	<div class="sub-footer">
 		<div class="row">
 			<div class="large-6 columns">
-				<h2>Noticias</h2>
+				<?php
+					$url = ($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+					$ing = ($_SERVER["HTTP_HOST"] . "/en/");
+					if ($url == $ing)
+					  {
+					  echo "<h2>News</h2>";
+					  }
+					else
+					  {
+					  echo "<h2>Noticias</h2>";
+					  }
+				?> 
 				<div class="news">
 					<ul>
 					<?php query_posts('blog=wordpress&showposts=3'); ?>
@@ -42,11 +56,35 @@
 						</li>
 					<?php endwhile; ?>
 					</ul>
-					<a href="#" class="btn">Ver Más Noticias</a>
+					<!-- Botón noticias idioma -->
+					<?php
+						$url = ($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+						$ing = ($_SERVER["HTTP_HOST"] . "/en/");
+						if ($url == $ing)
+						  {
+						  echo '<a href="/en/news" class="btn">More News</a>';
+						  }
+						else
+						  {
+						  echo '<a href="/noticias" class="btn">Ver Más Noticias</a>';
+						  }
+					?>
 				</div>		
 			</div>
 			<div class="large-6 columns">
-				<h2>Certificaciones</h2>
+
+				<?php
+					$url = ($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+					$ing = ($_SERVER["HTTP_HOST"] . "/en/");
+					if ($url == $ing)
+					  {
+					  echo "<h2>Certifications</h2>";
+					  }
+					else
+					  {
+					  echo "<h2>Certificaciones</h2>";
+					  }
+				?> 
 				<ul class="certif">
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/usda.jpg" alt="USDA"></li>
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/natures.jpg" alt="Nature's Choice"></li>

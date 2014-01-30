@@ -3,19 +3,24 @@
 		<header>
 			<div class="top-colors"></div>
 			<div class="row header">
-				<div class="large-6 columns">
-					<a class="nav-btn hide-for-mu" id="nav-open-btn" href="#nav">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-					<div class="logo">
-						<a href="<?php echo get_site_url(); ?>">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
+				<div class="small-4 columns">
+					<div class="btn-cont-resp show-for-small">
+						<a class="nav-btn hide-for-mu" id="nav-open-btn" href="#nav">
+							<span></span>
+							<span></span>
+							<span></span>
 						</a>
 					</div>
 				</div>
-				<div class="large-6 columns">
+				<div class="large-6 small-4 medium-custom columns">
+					<div class="logo">
+						<a href="<?php echo get_site_url(); ?>">
+							<img class="hide-for-small" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="King Berry SA">
+							<img class="show-for-small" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-responsive.png" alt="King Berry SA">
+						</a>
+					</div>
+				</div>
+				<div class="large-6 small-4 medium-custom columns">
 					<div class="search-block right">
 						<div class="large-3 columns lang">
 							<!-- <a href="<?php get_site_url(); ?>/en">

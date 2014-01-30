@@ -180,7 +180,7 @@ function get_search_form( $echo = true ) {
 			$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
 				<div class="search-cont">
 					<!--<label class="screen-reader-text" for="s">' . _x( 'Search for:', 'label' ) . '</label>-->
-					<input type="text" placeholder="Buscar" value="' . get_search_query() . '" name="s" id="s" />
+					<input type="text" placeholder="Search" value="' . get_search_query() . '" name="s" id="s" />
 					<input type="submit" class="icon-search" id="searchsubmit" value="&#xe607;" />
 				</div>
 			</form>';

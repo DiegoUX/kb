@@ -64,6 +64,11 @@ h6 					{ font-weight:bold; /* This helps to identify headings at the initial bu
 
 /*CUSTOMS STYLES*/
 
+/*Estilo temporal para barra admin*/
+#wpadminbar {
+    top: -46px;
+}
+
 /* Helpers */
 .no-padd {
 	padding: 0 !important;
@@ -91,6 +96,10 @@ header .header {
 header .nav-content {
 	background: #F3F3F3;
 	height: 36px;
+}
+
+.logo {
+    width: 100%;
 }
 
 .lang {
@@ -207,7 +216,8 @@ header .nav-content {
 #menu-main-menu > li > a, #menu-main-menu-en > li > a {
     line-height: 36px;
     margin: 0;
-    padding: 8px 25px;
+    /*padding: 8px 25px;*/
+    padding: 8px 20px;
     color: #817e7b;
     font-size: 0.933em;
     display: inline;
@@ -329,7 +339,13 @@ header .nav-content {
 #menu-main-menu ul.sub-menu li, #menu-main-menu-en ul.sub-menu li {
     display: block !important;
     padding: 4px 25px;
+    text-align: left;
 }
+
+#menu-main-menu ul.sub-menu li:hover, #menu-main-menu-en ul.sub-menu li:hover, ul.sub-menu li.current-menu-item {
+    background: none repeat scroll 0 0 #DEDEDE;
+}
+
 
 #menu-main-menu ul.sub-menu li:first-child, #menu-main-menu-en ul.sub-menu li:first-child {
     padding: 4px 25px 4px;
@@ -367,13 +383,19 @@ nav#nav{
     .hide-for-mu{
         display: none !important;
     }
-
-    
 }
 
 @media screen and (max-width:1023px) {
     .hide-for-sm{
         display: none !important;
+    }
+
+    .medium-custom {
+        width: 33.3%;
+    }
+
+    .btn-cont-resp {
+        display: block !important;
     }
 
     #menu-main-menu li, #menu-main-menu-en li {
@@ -415,7 +437,6 @@ nav#nav{
     #menu-main-menu > li > a:active,  
     #menu-main-menu > li.current-menu-item > a,
     #menu-main-menu > li.sm-displayed > a, 
-
     #menu-main-menu-en > li > a:hover,
     #menu-main-menu-en > li > a:active,  
     #menu-main-menu-en > li.current-menu-item > a,
@@ -472,10 +493,14 @@ nav#nav{
       background: none repeat scroll 0 0 #CC2A28;
       border-radius: 2em;
       display: block;
-      height: 0.4em;
-      margin-top: 6px;
+      height: 0.34em;
+      margin-top: 4px;
       opacity: 1;
       width: 100%;
+    }
+
+    .nav-btn {
+        width: 2.2em;
     }
 }
 /* end MM new menu styles */
@@ -484,6 +509,10 @@ nav#nav{
 .billboard {
 	background: #1B2143;
     float: left;
+    width: 100%;
+}
+
+.billboard-responsive img {
     width: 100%;
 }
 
@@ -510,9 +539,10 @@ nav#nav{
 }
 
 .billboard-text {
-    bottom: 100px;
+    bottom: 80px;
     position: absolute;
-    z-index: 200;
+    z-index: 199;
+    width: 42%;
 }
 
 .billboard-text h1 {
@@ -579,7 +609,7 @@ nav#nav{
 .callendar  {
 	font-size: 1em;
 	color: #aeaaa6;
-	letter-spacing: 0.5px;
+	/*letter-spacing: 0.5px;*/
 	margin: 10px 0 20px;
     line-height: 1.9em;
 }
@@ -701,7 +731,8 @@ footer {
 
 footer p {
 	color: #FFF !important;
-	font-size: 0.8667em;
+	font-size: 0.8667em !important;
+    margin: 0 !important;
 }
 
 
@@ -1319,17 +1350,22 @@ a.previouspostslink:before {
     float: left;
 }
 
+.btn-cont-resp {
+    height: 75px;
+    line-height: 105px;
+}
+
+.js-ready #nav {
+    top: 15px;
+}
+
+.js-nav .menu-main-menu-container {
+    margin-top: 20px;
+}
 
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
-
-/* 400 and up */
-@media screen and (min-width:400px) {
-
-					{ /* Place your styles here for all widths greater than 400px */ }
-
-}
 
 /* Retina Display */
 @media screen and (-webkit-min-device-pixel-ratio:2) {
@@ -1338,22 +1374,45 @@ a.previouspostslink:before {
 
 }
 
-@media screen and (min-width:400px) and (max-width: 768) {
+@media screen and (min-width:600px) and (max-width: 767px) {
+    .billboard-text {
+        width: 80%;
+    }
 
-                    { /* Place your styles here for all widths greater than 400px */ }
+}
+
+@media screen and (min-width:480px) and (max-width: 599px) {
+    .billboard-text {
+        bottom: 50px !important;
+        width: 94%;
+    }
 
 }
 
 @media screen and (max-width:480px) {
-    .contact .wpcf7-form-control.wpcf7-submit {
+    .contact-section .wpcf7-form-control.wpcf7-submit, .wpcf7-form > p {
         width: 100%;
+    }
+
+    .billboard-text {
+        bottom: 0;
+        font-size: 10px;
+        width: 94%;
+    }
+
+    .billboard-text h1 {
+        line-height: normal;
+    }
+
+    #lang_sel_list img.iclflag {
+        display: none;
     }
 }
 
 
 @media screen and (max-width:767px) {
     
-    .page h2, .gray-section, .clientes {
+    .page h2, .gray-section, .clientes, footer, .sub-footer {
         text-align: center;
     }
 
@@ -1400,19 +1459,40 @@ a.previouspostslink:before {
         margin-bottom: 20px;
     }
 
-    footer {
-        text-align: center;
+    header .header {
+        padding: 5px 0;
     }
-}
 
-@media screen and (max-width:640px) {
-    .callendar {
+    .news {
+        padding: 0;
+    }
+
+    .search-block {
         margin: 0;
+        text-align: right;
+        top: 22px;
+    }
+
+    .logo {
+        line-height: 75px;
     }
 }
 
-@media screen and (min-width:1025px) and (max-width: 1200px) {
+@media screen and (min-width:768px) and (max-width: 900px) {
     .billboard-text {
-        bottom: 30px;
+        bottom: 0px;
+        width: 62%;
+    }
+    .search-block {
+        margin: 0;
+        text-align: right;
+        top: 22px;
+    }
+}
+
+@media screen and (min-width:901px) and (max-width: 1180px) {
+    .billboard-text {
+        bottom: 0px;
+        width: 50%;
     }
 }
