@@ -886,7 +886,7 @@ div.wpcf7-mail-sent-ok {
     width: 90%;
 }
 
-.contact textarea {
+.contact-section textarea {
     height: auto;
 }
 
@@ -909,17 +909,17 @@ div.wpcf7-mail-sent-ok {
     margin-top: 17px;
 }
 
-.contact .textwidget > img {
+/*.contact .textwidget > img {
     margin-top: 24px;
-}
+}*/
 
-.contact .textwidget small a {
+.contact-section .textwidget small a {
     color: #FF0000 !important;
     display: block;
     margin-top: 5px;
 }
 
-.contact .textwidget small a:hover {
+.contact-section .textwidget small a:hover {
     text-decoration: underline;
 }
 
