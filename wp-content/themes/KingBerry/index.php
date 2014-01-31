@@ -32,8 +32,8 @@
 					</div>
 					<?php }  ?>
 					<div class="large-9 columns">
-						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date('F j, Y'); ?></time><span class="bullet">&bull;</span>
-						<div class="cat"><?php the_category(', '); ?></div>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date('F j, Y'); ?></time> <!--<span class="bullet">&bull;</span>-->
+						<!-- <div class="cat"><?php the_category(', '); ?></div> -->
 						<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 						<?php the_excerpt(); ?>
 					</div>

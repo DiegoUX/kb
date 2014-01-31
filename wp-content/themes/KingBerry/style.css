@@ -90,16 +90,17 @@ header .top-colors {
 }
 
 header .header {
-    padding: 35px 0;
+    padding: 20px 0 0 0;
 }
 
 header .nav-content {
 	background: #F3F3F3;
-	height: 36px;
+	height: 35px;
 }
 
 .logo {
     width: 100%;
+    line-height: 75px;
 }
 
 .lang {
@@ -210,7 +211,7 @@ header .nav-content {
 /* MM new menu styles */
 
 #menu-main-menu > li, #menu-main-menu-en > li {
-    margin-left: -4px;
+    margin-left: -5px;
 }
 
 #menu-main-menu > li > a, #menu-main-menu-en > li > a {
@@ -775,7 +776,8 @@ footer p {
 /* Nuestra empresa */
 .gray-section {
     background: #F6F6F6;
-    padding: 20px 0 180px;
+    padding: 20px 0 100px;
+    margin-top: 20px;
 }
 
 .gray-section .photo img {
@@ -1483,6 +1485,12 @@ a.previouspostslink:before {
         bottom: 0px;
         width: 62%;
     }
+
+    .billboard-text.en-bill {
+        bottom: 15px;
+        width: 82%;
+    }
+
     .search-block {
         margin: 0;
         text-align: right;
@@ -1494,5 +1502,17 @@ a.previouspostslink:before {
     .billboard-text {
         bottom: 0px;
         width: 50%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    header .header {
+        padding: 10px 0;
+    }
+
+    .search-block {
+        margin: 0;
+        text-align: right;
+        top: 22px;
     }
 }
