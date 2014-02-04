@@ -244,6 +244,24 @@
 	        'after_title' => '</h3>'
 	    ));
 
+	    register_sidebar(array(
+	        'name' => __('publicacion-side'),
+	        'id' => 'publicacion-side',
+	        'before_widget' => '<div id="%1$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('category-title'),
+	        'id' => 'category-title',
+	        'before_widget' => '<div id="%1$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
 	}
 
 

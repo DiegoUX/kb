@@ -1315,6 +1315,10 @@ a.previouspostslink:before {
     font-size: 0.8em;
 }
 
+.pink-date > div, .search-title h2 div {
+    display: inline-block;
+}
+
 .search .pink-date time, .category .pink-date time {
     font-size: 1em;
 }
