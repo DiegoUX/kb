@@ -64,11 +64,6 @@ h6 					{ font-weight:bold; /* This helps to identify headings at the initial bu
 
 /*CUSTOMS STYLES*/
 
-/*Estilo temporal para barra admin*/
-#wpadminbar {
-    top: -46px;
-}
-
 /* Helpers */
 .no-padd {
 	padding: 0 !important;
@@ -715,12 +710,12 @@ h2.title-green {
     border-bottom: 0;
 }
 
-.news p a, .news-content p a {
+.news p a, .news-content p a, .news-content .textwidget a {
     color: #cd2c24;
     /*margin-left: 10px;*/
 }
 
-.news p a:hover, .news-content p a:hover {
+.news p a:hover, .news-content p a:hover, .news-content .textwidget a:hover {
     text-decoration: underline;
 }
 
@@ -1235,8 +1230,9 @@ a.previouspostslink:before {
 
 .widget-custom {
     border-left: 1px solid #DEDEDE;
+    margin: 88px 0;
+    min-height: 500px;
     padding: 0 15px;
-    margin-bottom: 50px;
 }
 
 .widget-custom-content {
@@ -1261,7 +1257,7 @@ a.previouspostslink:before {
 
 .widget-custom .excerpt {
     font-size: 0.8em;
-    line-height: 22px;
+    line-height: normal;
 }
 
 .widget-custom-content > span {
@@ -1290,12 +1286,12 @@ a.previouspostslink:before {
     font-weight: 500;
 }
 
-.search ol {
+.search ol, .category ol {
     background: #F6F6F6;
     padding: 20px 0;
 }
 
-.search ol h2 a {
+.search ol h2 a, .category ol h2 a {
     color: #cd2c24;
     font-size: 1.067em;
     font-weight: 400;
@@ -1311,7 +1307,7 @@ a.previouspostslink:before {
     /*padding: 10px 0;*/
 }
 
-.search .pink-date, .search .pink-date time {
+.search .pink-date, .search .pink-date time, .category .pink-date, .category .pink-date time {
     background: none repeat scroll 0 0 #F28469;
     display: inline-block;
     padding: 0 5px;
@@ -1319,11 +1315,11 @@ a.previouspostslink:before {
     font-size: 0.8em;
 }
 
-.search .pink-date time {
+.search .pink-date time, .category .pink-date time {
     font-size: 1em;
 }
 
-.search ol article p {
+.search ol article p, .category ol article p  {
     color: #817e7b;color: #817E7B;
     font-size: 0.8em;
     line-height: 20px;
@@ -1335,20 +1331,20 @@ a.previouspostslink:before {
     margin-bottom: 20px;
 }
 
-.search ol li:last-child .result-block {
+.search ol li:last-child .result-block, .category ol li:last-child .result-block {
     border-bottom: none;
 }
 
-.search span.icon-news {
+.search span.icon-news, .category span.icon-news {
     color: #F28469;
     padding-right: 5px;
 }
 
-.search .no-result {
+.search .no-result, .category .no-result {
     min-height: 350px;
 }
 
-.search .wp-pagenavi {
+.search .wp-pagenavi, .category .wp-pagenavi {
     float: left;
 }
 
@@ -1422,7 +1418,7 @@ a.previouspostslink:before {
         margin: 10px 0 40px;
     }
 
-    .contact .wpcf7-form > p {
+    .contact-section .wpcf7-form > p {
         width: 100%;
     }
 

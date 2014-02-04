@@ -85,14 +85,15 @@
 					  echo "<h2>Certificaciones</h2>";
 					  }
 				?> 
-				<ul class="certif">
+				<!-- <ul class="certif">
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/usda.jpg" alt="USDA"></li>
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/natures.jpg" alt="Nature's Choice"></li>
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/fairforlife.jpg" alt="Fair for Life"></li>
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/uk.jpg" alt="UK"></li>
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/globalgap.jpg" alt="Global GAP"></li>
 					<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/certificaciones/OIA.jpg" alt="OIA"></li>
-				</ul>
+				</ul> -->
+				<?php dynamic_sidebar( 'certificaciones-home' ); ?>
 			</div>
 		</div>
 	</div>

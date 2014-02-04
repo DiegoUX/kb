@@ -119,7 +119,7 @@
 
 	function new_excerpt_more($more) {
 	   global $post;
-	   return '<a class="ver-mas" href="'. get_permalink($post->ID) . '">Ver más &raquo;</a>';
+	   return '<a class="ver-mas" href="'. get_permalink($post->ID) . '">&#91;...&#93;</a>';
 	}
 	add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -217,6 +217,33 @@
 	        'after_title' => '</h3>'
 	    ));
 
+	    register_sidebar(array(
+	        'name' => __('Footer'),
+	        'id' => 'footer-side',
+	        'before_widget' => '<div id="%1$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('News-title'),
+	        'id' => 'news-title',
+	        'before_widget' => '<div id="%1$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
+	    register_sidebar(array(
+	        'name' => __('back-to'),
+	        'id' => 'back-to',
+	        'before_widget' => '<div id="%1$s">',
+	        'after_widget' => '</div>',
+	        'before_title' => '<h3>',
+	        'after_title' => '</h3>'
+	    ));
+
 	}
 
 
@@ -234,12 +261,12 @@
 	            the_post();
 	            $link = get_permalink();
 	            $title = get_the_title();
-	            $date = get_the_date();                              
+	            $date = get_the_date('d/m/Y');                            
 
 	            $content .= "<div class='widget-custom-content'>";
 	            $content .= "<h4><a href='$link' target='_top'>$title</a></h4>\n";
 	            $content .= "<span>$date</span>";
-	            $content .= "<p class='excerpt'>" . get_the_excerpt() . "</p>";
+	            $content .= "<p class='excerpt'>" . excerpt(10) . "</p>";
 	            $content .= "</div>";
 
 	        endwhile;
@@ -266,3 +293,21 @@
 	// }  
 	  
 	// add_action( 'template_redirect', 'get_rid_of_wpautop' );
+
+	// function custom_excerpt_length( $length ) {
+	// 	return 20;
+	// }
+	// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+	// 
+
+	function excerpt($limit) {
+      $excerpt = explode(' ', get_the_excerpt(), $limit);
+      if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'<a class="ver-mas" href="'. get_permalink($post->ID) . '">&#91;...&#93;</a>';
+      } else {
+        $excerpt = implode(" ",$excerpt);
+      } 
+      $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+      return $excerpt;
+    }
