@@ -140,7 +140,7 @@ header .nav-content {
 #lang_sel_list img.iclflag {
     box-shadow: 0 1px 2px 0 #555555;
     height: 12px;
-    left: 3px;
+    left: -5px;
     position: relative;
     top: -1px;
     width: 18px;

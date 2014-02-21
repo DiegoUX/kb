@@ -26,4 +26,7 @@ $(document).ready(function(){
 			$(".sub-menu.displayed").toggleClass("displayed").parent("li").toggleClass("sm-displayed");
 			//Busque a todos las lista "sub-menu" desplegadas, y borre su clase "displayed"; y borre la clase "sm-displayed" de su padre.
 		});
+
+	$('.icl-es a.lang_sel_other').html('<img title="Español" alt="es" src="http://kbargentina.com.ar/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.png" class="iclflag">Español');
+	$('.icl-en a.lang_sel_other').html('<img title="English" alt="en" src="http://kbargentina.com.ar/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" class="iclflag">English');
 });
